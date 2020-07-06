@@ -4,16 +4,6 @@ from unittest.mock import Mock, patch
 
 import pytest
 from eth_utils import decode_hex, to_checksum_address
-from tests.libs.mocks.web3 import Web3Mock
-from tests.monitoring.monitoring_service.factories import (
-    DEFAULT_CHANNEL_IDENTIFIER,
-    DEFAULT_PARTICIPANT1,
-    DEFAULT_PARTICIPANT2,
-    DEFAULT_SETTLE_TIMEOUT,
-    DEFAULT_TOKEN_ADDRESS,
-    DEFAULT_TOKEN_NETWORK_ADDRESS,
-    create_signed_monitor_request,
-)
 
 from monitoring_service.database import Database
 from monitoring_service.events import (
@@ -49,6 +39,16 @@ from raiden_libs.events import (
     ReceiveMonitoringRewardClaimedEvent,
     ReceiveNonClosingBalanceProofUpdatedEvent,
     ReceiveTokenNetworkCreatedEvent,
+)
+from tests.libs.mocks.web3 import Web3Mock
+from tests.monitoring.monitoring_service.factories import (
+    DEFAULT_CHANNEL_IDENTIFIER,
+    DEFAULT_PARTICIPANT1,
+    DEFAULT_PARTICIPANT2,
+    DEFAULT_SETTLE_TIMEOUT,
+    DEFAULT_TOKEN_ADDRESS,
+    DEFAULT_TOKEN_NETWORK_ADDRESS,
+    create_signed_monitor_request,
 )
 
 
